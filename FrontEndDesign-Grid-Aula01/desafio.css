@@ -1,0 +1,38 @@
+div#div01 {
+    grid-area: divVerde;
+    background-color: rgb(0, 219, 0);
+}
+div#div02 {
+    grid-area: divRosa;
+    background-color: rgb(255, 69, 230);
+}
+div#div03 {
+    grid-area: divAzul;
+    background-color: rgb(54, 174, 253);
+}
+div#div04 {
+    grid-area: divLaranja;
+    background-color: orange;
+}
+div#div05 {
+    grid-area: divVerdeEscuro;
+    background-color: green;
+}
+div#div06 {
+    grid-area: divVerdeMusgo;
+    background-color: mediumseagreen;
+}
+
+#grade {
+    display: grid;
+    grid-template-areas: 
+        "divVerde divVerde divAzul divAzul divAzul"
+        "divVerde divVerde divLaranja divLaranja divVerdeEscuro"
+        "divRosa divRosa divLaranja divLaranja divVerdeMusgo";
+    grid-template-rows: repeat(3, 5rem);
+    grid-template-columns: repeat(5, 5rem);
+}
+
+#grade > * {
+    border: 1px solid black;
+}

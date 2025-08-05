@@ -1,0 +1,65 @@
+.grid {
+  display: grid;
+  /*Define o width e height colunas e linhas normalmente porém é um vaor fixo (absoluto):*/
+  /* 
+    grid-template-columns: 300px 100px;
+    grid-template-rows: 40x 100px; 
+  */
+
+  /*Divide o width e height das colunas e linhas em frações e distribui entre os elementos (relativo):*/
+  /* 
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 3fr 1fr; 
+  */
+  
+  /*Repete o width e height das colunas e linhas um dterminado número de vezes*/
+  /* 
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(12, 1fr) ;  
+  */
+  
+  /* Define um espaçameno entre as linhas e colunas, pode ser feito separadamente ou em conjunto */
+  /* 
+  gap: 10px;
+  column-gap: 10px;
+  row-gap: 15px; 
+  */
+}
+
+  /*Definindo os nomes das áreas que vão estar dentro do grid*/
+  header {
+    grid-area: header;
+  }
+  footer {
+    grid-area: footer;
+  }
+  section#produtos {
+    grid-area: produtos;
+  }
+  section#servicos {
+    grid-area: servicos;
+  }
+  nav {
+    grid-area: nav;
+  }
+  aside {
+    grid-area: publicidade;
+  }
+
+
+/*Definindo a estrutura do grid*/
+#grade {
+    display: grid;
+    grid-template-areas: 
+        "nav header header"
+        "nav produtos publicidade"
+        "nav servicos publicidade"
+        "nav footer footer";
+    grid-template-rows: 100px 1fr 1fr 75px;
+    grid-template-columns: 20% auto 15%;
+}
+
+/*Aplica uma borda para todos os filho da div com id = "grade"*/
+#grade > * {
+    border: 1px solid black;
+}
